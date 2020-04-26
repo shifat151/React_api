@@ -1,8 +1,29 @@
 import React, { useEffect, useState } from 'react';
+
 import './App.css';
-import Beer from './Beer'
+import Beer from './Beer';
+import BeerDetail from './BeerDetail';
+import { Link, BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const App = () => {
+
+
+  return (
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/:id" component={BeerDetail} />
+      </Switch>
+
+    </Router>
+
+
+  );
+
+
+}
+const Home = () => {
+
   const [beers, setBeers] = useState([]);
   const [search, setSearch] = useState('');
 
@@ -41,19 +62,25 @@ const App = () => {
       <div className="beers">
         {
           beers.map(beer => (
-            <Beer key={beer.id}
-              name={beer.name}
-              description={beer.description}
-              image={beer.image_url}
-            />
+            <Link to={`/${beer.id}`}>
+              <Beer key={beer.id}
+                name={beer.name}
+                description={beer.description}
+                image={beer.image_url}
+              />
+            </Link>
+
+
           ))
         }
       </div>
 
 
     </div>
+  )
 
-  );
-}
+
+
+};
 
 export default App;
