@@ -1,0 +1,23 @@
+.App{
+  padding-top: 1px;
+  min-height: 100vh;
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+.beers{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.search-bar{
+  width: 30%;
+  border: none;
+  padding: 10px;
+  justify-content: center;
+}
+.search-form{
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
