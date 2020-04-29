@@ -1,3 +1,10 @@
+Features:
+
+1. Fetched all data from API on the Homepage
+2. Search by name on the homepage
+3. Details of each item on the Aboutpage
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
